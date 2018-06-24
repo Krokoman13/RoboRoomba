@@ -5,4 +5,3 @@ void stop();
 void initiate();
 void straight();
 void move(bool, bool, double);
-double frontdist();
