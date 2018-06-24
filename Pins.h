@@ -1,4 +1,5 @@
 #include "mbed/mbed.h"
+#include "HCSR04.h" 
 
 DigitalIn button(MyButton);
 
@@ -15,12 +16,9 @@ DigitalOut RFrt(Pin);
 DigitalOut RBck(Pin);
 
 //Sensor
-DigitalIn svin(D9);
-DigitalOut svout(D10);
-DigitalIn srin(D11);
-DigitalOut srout(D12);
-DigitalIn soin(D13);
-DigitalOut soout(D14);
+HCSR04 FrontDist(D10, D9);
+HCSR04 RightDist(D12, D11);
+HCSR04 UnderDist(D14, D13);
 
 DigitalIn mybutton(USER_BUTTON);
 
