@@ -21,3 +21,8 @@ DigitalIn srin(D11);
 DigitalOut srout(D12);
 DigitalIn soin(D13);
 DigitalOut soout(D14);
+
+DigitalIn mybutton(USER_BUTTON);
+
+//Define
+double speed = 0.5; //this is the speed for the robot when driving straight
