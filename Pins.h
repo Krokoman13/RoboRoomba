@@ -1,19 +1,15 @@
 #include "mbed/mbed.h"
 #include "HCSR04.h" 
 
-DigitalIn button(MyButton);
+//Motor L
+PwmOut lspeed(D6);
+DigitalOut lfor(D7);
+DigitalOut lback(D8);
 
-//MotorL
-PwmOut Lspd(Pin);
-Lspd.period(0.010);
-DigitalOut LFrt(Pin);
-DigitalOut LBck(Pin);
-
-//MotorR
-PwmOut Rspd(Pin);
-Rspd.period(0.010);
-DigitalOut RFrt(Pin);
-DigitalOut RBck(Pin);
+//Motor R
+PwmOut rspeed(D5);
+DigitalOut rfor(D2);
+DigitalOut rback(D4);
 
 //Sensor
 HCSR04 FrontDist(D10, D9);
