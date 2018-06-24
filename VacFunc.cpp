@@ -1,38 +1,44 @@
-#include "VacClass.h"
+
 #include "mbed/mbed.h"
+#include "functions.h"
+#include "pins.h"
 
-void Move(Motor motorL, Motor motorR) {
-	
+void initiate() {
+    lspeed.period(0.010);
+    rspeed.period(0.010);
+    };
+    
+bool start() {
+    return mybutton;
+    };
 
-};
+void straight() {
+    rspeed = speed ;
+    lspeed =  speed * 0.85;
+    
+    rfor = true;
+    lfor = true;
+    };
+    
+void stop(){
+    rfor = false;
+    lfor = false;
+    rback = false;
+    lback = false;
+    };
 
-void Move(Motor motorL, Motor motorR, int sec) {
-	Lspd = motorL.get_speed();
-	wait(sec);
-
-};
-
-void Stop(Motor motor1, Motor motor2) {
-	
-};
-
-bool DetectO(DistSensor dist) {
-
-};
-
-bool DetectD(DistSensor dist) {
-
-};
-
-bool Detect(DistSensor dist, DistSensor dist2, DistSensor dist3) {
-
-};
-
-int Battery() {
-	//return battery level 0-100	
-	return 0;
-};
-
-bool Charge() {
-	return false;
-};
+    
+void move(bool left, bool right, double sec) {  //move(true, false, 0.47);
+    rspeed = 0.2;
+    lspeed =  0.2;
+    
+    rfor = right;
+    lfor = left;
+    rback = !right;
+    lback = !left;
+    wait(sec);
+    rback = false;
+    lback = false;
+    rfor = false;
+    lfor = false;
+    };
