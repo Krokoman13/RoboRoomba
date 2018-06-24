@@ -29,8 +29,8 @@ void stop(){
 
     
 void move(bool left, bool right, double sec) {  //move(true, false, 0.47);
-    rspeed = 0.2;
-    lspeed =  0.2;
+    rspeed = speed * 0.5;
+    lspeed = speed * 0.5;
     
     rfor = right;
     lfor = left;
