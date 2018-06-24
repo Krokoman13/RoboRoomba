@@ -14,4 +14,10 @@ Rspd.period(0.010);
 DigitalOut RFrt(Pin);
 DigitalOut RBck(Pin);
 
-//Front Ultrasone
+//Sensor
+DigitalIn svin(D9);
+DigitalOut svout(D10);
+DigitalIn srin(D11);
+DigitalOut srout(D12);
+DigitalIn soin(D13);
+DigitalOut soout(D14);
