@@ -1,10 +1,7 @@
-#include "std_lib_facilities.h"
-#include "VacClass.h"
 #include "VacFunc.h"
 #include "mbed/mbed.h"
 
 int main()
-try
 {
 	enum State { start, wait, move, obstacle, stop};
 	State states = start;
@@ -68,9 +65,4 @@ try
 			break;
 		}
 	}
-}
-
-catch (...) {
-	cerr << "Error: Unknown error";
-	keep_window_open();
 }
