@@ -1,6 +1,6 @@
 
 #include "mbed/mbed.h"
-#include "functions.h"
+#include "VacFunc.h""
 #include "pins.h"
 
 void initiate() {
